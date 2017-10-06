@@ -13,8 +13,8 @@
 #   notify:
 #     - enable ufw
 
-- include: ssl.yml
+- import_tasks: ssl.yml
   with_dict: "{{ sites }}"
   when: item.value.ssl
 
-- include: http.yml
+- import_tasks: http.yml
